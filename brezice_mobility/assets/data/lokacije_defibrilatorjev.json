@@ -1,0 +1,178 @@
+{
+  "aeds": [
+      {
+        "opis": "Občina Brežice",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.5926788,
+        "latitude": 45.903844
+      },
+      {
+        "opis": "Zdravstveni dom Brežice",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.5941272,
+        "latitude": 45.9079725
+      },
+      {
+        "opis": "Lekarna Bizeljsko",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.692634,
+        "latitude": 46.0131496
+      },
+      {
+        "opis": "Mednarodni mejni prehod Obrežje",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.6934762,
+        "latitude": 45.8461033
+      },
+      {
+        "opis": "Vojašnica Cerklje ob Krki",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.5214125,
+        "latitude": 45.886207
+      },
+      {
+        "opis": "Osnovna šola Cerklje ob Krki",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.5227844,
+        "latitude": 45.8846237
+      },
+      {
+        "opis": "Osnovna šola Velika Dolina",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.6639504,
+        "latitude": 45.8529337
+      },
+      {
+        "opis": "Osnovna šola Maksa Pleteršnika Pišece",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.6473073,
+        "latitude": 46.0032146
+      },
+      {
+        "opis": "Gasilski dom Pirošica",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.524202,
+        "latitude": 45.8768224
+      },
+      {
+        "opis": "M.S.H. d.o.o.",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.6788823,
+        "latitude": 45.8931184
+      },
+      {
+        "opis": "Trgovina Hofer",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.5975229,
+        "latitude": 45.9107719
+      },
+      {
+        "opis": "Kodrič Boško",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.5103806,
+        "latitude": 45.8920655
+      },
+      {
+        "opis": "KS Krška vas",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.5708402,
+        "latitude": 45.8912889
+      },
+      {
+        "opis": "Osnovna šola Globoko",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.628202,
+        "latitude": 45.9561436
+      },
+      {
+        "opis": "Nekdanja Osnovna šola Kapele",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.677076,
+        "latitude": 45.9300946
+      },
+      {
+        "opis": "Gasilski dom Obrežje",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.6877803,
+        "latitude": 45.8505406
+      },
+      {
+        "opis": "Nekdanja osnovna šola Mrzlava vas oziroma Dom krajanov Mrzlava vas",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.5815039,
+        "latitude": 45.877642
+      },
+      {
+        "opis": "Prosvetni dom Artiče",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.5839493,
+        "latitude": 45.9526049
+      },
+      {
+        "opis": "Gasilski dom PGD Župelevec",
+        "delovni_cas": "dostopni 24 ur",
+        "longitude": 15.685158,
+        "latitude": 45.9598479
+      },
+      {
+        "opis": "Terme Čatež",
+        "delovni_cas": "omejeno dostopni",
+        "longitude": 15.6247473,
+        "latitude": 45.8916062
+      },
+      {
+        "opis": "Gimnazija Brežice",
+        "delovni_cas": "omejeno dostopni",
+        "longitude": 15.5916864,
+        "latitude": 45.9076123
+      },
+      {
+        "opis": "Intermarket Brežice",
+        "delovni_cas": "omejeno dostopni",
+        "longitude": 15.5957472,
+        "latitude": 45.9176727
+      },
+      {
+        "opis": "Upravna enota Brežice",
+        "delovni_cas": "omejeno dostopni",
+        "longitude": 15.5927257,
+        "latitude": 45.9043629
+      },
+      {
+        "opis": "Splošna bolnišnica Brežice",
+        "delovni_cas": "omejeno dostopni",
+        "longitude": 15.5946422,
+        "latitude": 45.9088646
+      },
+      {
+        "opis": "Ekonomska in trgovska šola Brežice",
+        "delovni_cas": "omejeno dostopni",
+        "longitude": 15.6047246,
+        "latitude": 45.9075675
+      },
+      {
+        "opis": "Zavarovalnica Triglav d.d.",
+        "delovni_cas": "omejeno dostopni",
+        "longitude": 15.5915791,
+        "latitude": 45.9125765
+      },
+      {
+        "opis": "TA Regulator d.o.o.",
+        "delovni_cas": "omejeno dostopni",
+        "longitude": 15.5927029,
+        "latitude": 45.915887
+      },
+      {
+        "opis": "SŽ-Vleka in tehnika d.o.o.",
+        "delovni_cas": "omejeno dostopni",
+        "longitude": 15.648002,
+        "latitude": 45.9016976
+      },
+      {
+        "opis": "Lekarna Trnje",
+        "delovni_cas": "omejeno dostopni",
+        "longitude": 15.6013476,
+        "latitude": 45.9047542
+      }
+  ]
+}

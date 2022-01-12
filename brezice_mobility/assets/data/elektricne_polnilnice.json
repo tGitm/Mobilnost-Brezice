@@ -1,0 +1,144 @@
+{
+  "charges": [
+     {
+        "opis": "Apartmajska hiša Sumrak",
+        "longitude": 15.6770626,
+        "latitude": 45.9970818,
+        "cena": "free",
+        "vticnnicaSt": 1,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "11kw",
+        "naslov" : "Vitna vas 22, 8259 Bizeljsko"
+      },
+      {
+        "opis": "Turistična kmetija Martinovi",
+        "longitude": 15.573894,
+        "latitude": 45.8639567,
+        "cena": "free",
+        "vticnnicaSt": 1,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "11kw",
+        "naslov" : "Globočice 8, 8262 Krška vas, Slovenia"
+      },
+      {
+        "opis": "Bubka Bar",
+        "longitude": 15.6139733,
+        "latitude": 45.9532299,
+        "cena": "free",
+        "vticnnicaSt": 2,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "11kw in 22kw",
+        "naslov" : "Mali vrh 9, Dečno selo, Slovenia"
+      },
+      {
+        "opis": "Gostilna Pension Les",
+        "longitude": 15.6024743,
+        "latitude": 45.89092,
+        "cena": "free",
+        "vticnnicaSt": 2,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "11kw",
+        "naslov" : "Rimska cesta 31, 8250 Brežice, Slovenija"
+      },
+      {
+        "opis": "Istenič d.o.o.",
+        "longitude": 15.6937012,
+        "latitude": 45.9700257,
+        "cena": "free",
+        "vticnnicaSt": 2,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "22kw",
+        "naslov" : "Stara Vas-Bizeljsko 6b, 8259 Bizeljsko, Slovenija"
+      },
+      {
+        "opis": "Stara gostilna Krulc",
+        "longitude": 15.628394,
+        "latitude": 45.8983978,
+        "cena": "free",
+        "vticnnicaSt": 2,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "11kw",
+        "naslov" : "Mostec 47, 8257 Dobova, Slovenija"
+      },
+      {
+        "opis": "Terme Paradiso",
+        "longitude": 15.6546308,
+        "latitude": 45.8978868,
+        "cena": "free",
+        "vticnnicaSt": 2,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "11kw",
+        "naslov" : "Selska cesta 15b, 8257 Dobova, Slovenia"
+      },
+      {
+        "opis": "AFP d.o.o.",
+        "longitude": 15.6440583,
+        "latitude": 45.9022508,
+        "cena": "free",
+        "vticnnicaSt": 2,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "22kw",
+        "naslov" : "Sela pri Dobovi 2, 8257 Dobova, Slovenija"
+      },
+      {
+        "opis": "Intermarket Brežice",
+        "longitude": 15.5966315,
+        "latitude": 45.918241,
+        "cena": "free",
+        "vticnnicaSt": 2,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "14kw",
+        "naslov" : "Tovarniška cesta 10, 8250 Brežice, Slovenija"
+      },
+      {
+        "opis": "KS Sromlje",
+        "longitude": 15.591096,
+        "latitude": 45.9882573,
+        "cena": "free",
+        "vticnnicaSt": 2,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "11kw",
+        "naslov" : "Sromlje 5, 8256 Sromlje"
+      },
+      {
+        "opis": "KS Kapele",
+        "longitude": 15.6769994,
+        "latitude": 45.9300975,
+        "cena": "free",
+        "vticnnicaSt": 2,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "22kw",
+        "naslov" : "Kapele 15, 8258 Kapele, Slovenija"
+      },
+      {
+        "opis": "Občina Brežice",
+        "longitude": 15.5925995,
+        "latitude": 45.9039631,
+        "cena": "free",
+        "vticnnicaSt": 2,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "22kw",
+        "naslov" : "Bizeljska cesta 1a, 8250 Brežice, Slovenija"
+      },
+      {
+        "opis": "ZPTM Brežice",
+        "longitude": 15.5949894,
+        "latitude": 45.902162,
+        "cena": "free",
+        "vticnnicaSt": 2,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "22kw",
+        "naslov" : "Ulica Ilije Gregoriča 12, 8250 Brežice, Slovenija"
+      },
+      {
+        "opis": "Zavod za šport",
+        "longitude": 15.5958176,
+        "latitude": 45.9079647,
+        "cena": "free",
+        "vticnnicaSt": 2,
+        "vrstaVticnice": "Type 2",
+        "nazivnaMoc" : "11kw",
+        "naslov" : "Černelčeva cesta 10, 8250 Brežice"
+      }
+  ]
+}

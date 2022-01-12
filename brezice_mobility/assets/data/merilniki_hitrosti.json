@@ -1,0 +1,268 @@
+{
+  "speeds": [
+    {
+      "opis": "Brežice cesta Svobode",
+      "longitude": 15.6034425,
+      "latitude": 45.9040651,
+      "proizvajalec": "Sipronika d.o.o.",
+      "coordinates": [
+        [
+          15.6034425,
+          45.9040651
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - cesta bratov Milavcev 71",
+      "longitude": 15.5904881,
+      "latitude": 45.915105,
+      "proizvajalec": "Sipronika d.o.o.",
+      "coordinates": [
+        [
+          15.5904881,
+          45.915105
+        ]
+      ]
+    },
+    {
+      "opis": "KS Šentlenart - Lenartova Pot",
+      "longitude": 15.5862944,
+      "latitude": 45.9233098,
+      "proizvajalec": "Sipronika d.o.o.",
+      "coordinates": [
+        [
+          15.5862944,
+          45.9233098
+        ]
+      ]
+    },
+    {
+      "opis": "KS Šentlenart - Brezina 55",
+      "longitude": 15.5972984,
+      "latitude": 45.9369842,
+      "proizvajalec": "Sipronika d.o.o.",
+      "coordinates": [
+        [
+          15.5972984,
+          45.9369842
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Gaberje pri Dobovi",
+      "longitude": 15.6508794,
+      "latitude": 45.9051751,
+      "proizvajalec": "Sipronika d.o.o.",
+      "coordinates": [
+        [
+          15.6508794,
+          45.9051751
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Ribnica",
+      "longitude": 15.6719363,
+      "latitude": 45.8654419,
+      "proizvajalec": "Sipronika d.o.o.",
+      "coordinates": [
+        [
+          15.6719363,
+          45.8654419
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Jesenice na Dolenjskem",
+      "longitude": 15.6895658,
+      "latitude": 45.8575143,
+      "proizvajalec": "Sipronika d.o.o.",
+      "coordinates": [
+        [
+          15.6895658,
+          45.8575143
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Velika Dolina",
+      "longitude": 15.6642486,
+      "latitude": 45.8529224,
+      "proizvajalec": "Sipronika d.o.o.",
+      "coordinates": [
+        [
+          15.6642486,
+          45.8529224
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Krška vas",
+      "longitude": 15.5655629,
+      "latitude": 45.8928052,
+      "proizvajalec": "Sipronika d.o.o.",
+      "coordinates": [
+        [
+          15.5655629,
+          45.8928052
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Mostec (iz Dobove)",
+      "longitude": 15.6341343,
+      "latitude": 45.8982577,
+      "proizvajalec": "Intermatic d.o.o.",
+      "coordinates": [
+        [
+          15.6341343,
+          45.8982577
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Mostec (iz Brežic)",
+      "longitude": 15.6263453,
+      "latitude": 45.8998311,
+      "proizvajalec": "Intermatic d.o.o.",
+      "coordinates": [
+        [
+          15.6263453,
+          45.8998311
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Dvorce",
+      "longitude": 15.6147826,
+      "latitude": 45.8817867,
+      "proizvajalec": "Intermatic d.o.o.",
+      "coordinates": [
+        [
+          15.6147826,
+          45.8817867
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Črešnjice pri Cerkljah",
+      "longitude": 15.5135621,
+      "latitude": 45.891707,
+      "proizvajalec": "Intermatic d.o.o.",
+      "coordinates": [
+        [
+          15.5135621,
+          45.891707
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Cundrovec",
+      "longitude": 15.6070229,
+      "latitude": 45.9278864,
+      "proizvajalec": "Intermatic d.o.o.",
+      "coordinates": [
+        [
+          15.6070229,
+          45.9278864
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Mali Vrh",
+      "longitude": 15.6147557,
+      "latitude": 45.9494353,
+      "proizvajalec": "Intermatic d.o.o.",
+      "coordinates": [
+        [
+          15.6147557,
+          45.9494353
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Artiče (kapelica)",
+      "longitude": 15.5881579,
+      "latitude": 45.9547453,
+      "proizvajalec": "Intermatic d.o.o.",
+      "coordinates": [
+        [
+          15.5881579,
+          45.9547453
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Artiče (spomenik)",
+      "longitude": 15.5835098,
+      "latitude": 45.9527818,
+      "proizvajalec": "Intermatic d.o.o.",
+      "coordinates": [
+        [
+          15.5835098,
+          45.9527818
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Zgornji Obrež",
+      "longitude": 15.565256,
+      "latitude": 45.9373488,
+      "proizvajalec": "K-BROS d.o.o.",
+      "coordinates": [
+        [
+          15.565256,
+          45.9373488
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Dolenje Skopice (iz semri Krške vasi)",
+      "longitude": 15.5568588,
+      "latitude": 45.9000431,
+      "proizvajalec": "K-BROS d.o.o.",
+      "coordinates": [
+        [
+          15.5568588,
+          45.9000431
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Dolenje Skopice (iz smeri Virh)",
+      "longitude": 15.5521479,
+      "latitude": 45.9036427,
+      "proizvajalec": "K-BROS d.o.o.",
+      "coordinates": [
+        [
+          15.5521479,
+          45.9036427
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Dvorce (iz smeri Čateža)",
+      "longitude": 15.6100145,
+      "latitude": 45.887247,
+      "proizvajalec": "K-BROS d.o.o.",
+      "coordinates": [
+        [
+          15.6100145,
+          45.887247
+        ]
+      ]
+    },
+    {
+      "opis": "Brežice - Ribnica (iz smeri Jesenice)",
+      "longitude": 15.6680998,
+      "latitude": 45.8671238,
+      "proizvajalec": "K-BROS d.o.o.",
+      "coordinates": [
+        [
+          15.6680998,
+          45.8671238
+        ]
+      ]
+    }
+  ]
+}
