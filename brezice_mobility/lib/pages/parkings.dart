@@ -4,6 +4,9 @@ import 'package:latlong2/latlong.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'dart:developer';
+import 'package:get/get.dart';
+import 'package:brezice_mobility/components/size_config.dart';
+import 'package:brezice_mobility/components/nav_bar.dart';
 
 
 class Home extends StatefulWidget {
@@ -37,25 +40,67 @@ class _HomeState extends State<Home> {
 
   }
 
+
+  /// project bottom sheet
+  showBottomSheet(Text lokacija, Text opis_loacije, Text parkirni_prostori, Text prostori_za_invalide, Text parkirni_rezim) {
+    Get.bottomSheet(
+      Container(
+        padding: EdgeInsets.only(top: 4),
+        height: SizeConfig.screenHeight * 0.24,
+        width: SizeConfig.screenWidth,
+        color: Colors.white,
+        child: Column(children: [
+          Container(
+            height: 6,
+            width: 120,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.grey[300]
+            ),
+          ),
+          Spacer(),
+          //here I'll add close button
+          /*_buildBottomSheetButton(  // čene pa damo task completed gumb še zravn
+                  label: "Task Completed",
+                  onTap: () {
+                    _taskController.markTaskCompleted(task.id);
+                    Get.back();
+                  },
+                  clr: primaryClr),*/
+          SizedBox(
+            height: 20,
+          ),
+        ]),
+      ),
+    );
+  }
+
   List<Marker> _buildMarkers() {
     final _markerList = <Marker>[];
     for (int i = 0; i < _items.length; i++) {
       _markerList.add(
-          Marker(
-            width: 24.0,
-            height: 24.0,
-            point: LatLng(_items[i]['LAT'], _items[i]['LON']),
-            builder: (_) {
-              return GestureDetector(
-                onTap: () {
-                  log('Selected: ${_items[i]['Opis_lokacije']}');
-                },
-                child: Image.asset('assets/icons/parking_blue.png'),
-              );
-            },
-          ),
+        Marker(
+          width: 28.0,
+          height: 28.0,
+          point: LatLng(_items[i]['LAT'], _items[i]['LON']),
+          builder: (_) {
+            return GestureDetector(
+              onTap: () {
+                showBottomSheet(
+                  Text('Lokacija: ${_items[i]['lokacija_parkirisca']}'),
+                  Text('Opis: ${_items[i]['opis_lokacije']}'),
+                  Text('Št. mest: ${_items[i]['parkirni_prostori']}'),
+                  Text('Mesta invalidi: ${_items[i]['parkirni_prostori_za_invalide']}'),
+                  Text('Režim: ${_items[i]['parkirni_rezim']}'),
+                );
+                log('Selected: ${_items[i]['opis_lokacije']}');
+              },
+              child: Image.asset('assets/icons/parking_blue.png'),
+            );
+          },
+        ),
       );
-      }
+    }
     return _markerList;
   }
 
@@ -65,6 +110,7 @@ class _HomeState extends State<Home> {
       final _markers = _buildMarkers();
 
       return Scaffold(
+        drawer: NavBar(),
         appBar: AppBar(
           centerTitle: true,
           title: Column(
@@ -83,7 +129,7 @@ class _HomeState extends State<Home> {
             FlutterMap(
               options: MapOptions(
                 center: _brezice,
-                zoom: 15.0,
+                zoom: 15.5,
                 minZoom: 13,
               ),
               layers: [
