@@ -22,64 +22,100 @@ class _ChargesState extends State<Charges> {
   Color appbar = Color(0xff4471a0);
   List<dynamic> _items = [];
 
-  //Fetch data from json
-  Future<void> _readJson() async {
-    final String response = await rootBundle.loadString(
-        'assets/data/elektricne_polnilnice.json');
-    final data = await json.decode(response);
-    _items = data['charges'];
-    print(_items[0]['opis']);
-    print(_items[0]['latitude']);
-    print(_items[0]['longitude']);
-    /*setState(() {
+  @override
+  Widget build(BuildContext context) {
+    //Fetch data from json
+    Future<void> _readJson() async {
+      final String response = await rootBundle.loadString(
+          'assets/data/elektricne_polnilnice.json');
+      final data = await json.decode(response);
+      _items = data['chargers'];
+      /*setState(() {
       _items = data["parkings"];
     });*/
+    }
 
-  }
-
-  List<Marker> _buildMarkers() {
-    final _markerList = <Marker>[];
-    for (int i = 0; i < _items.length; i++) {
-      _markerList.add(
+    List<Marker> _buildMarkers() {
+      _readJson();
+      final _markerList = <Marker>[];
+      for (int i = 0; i < _items.length; i++) {
+        _markerList.add(
           Marker(
-            width: 24.0,
-            height: 24.0,
+            width: 28.0,
+            height: 28.0,
             point: LatLng(_items[i]['latitude'], _items[i]['longitude']),
             builder: (_) {
               return GestureDetector(
                 onTap: () {
-                  log('Selected: ${_items[i]['opis']}');
+                  showModalBottomSheet<void>(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        height: 260,
+                        color:  Colors.grey[100],
+                        child: Padding(
+                          padding:  EdgeInsets.fromLTRB(10, 0, 10, 0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                                child: Text(
+                                  'Podatki o polnilnici',
+                                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              Text('Lokacija: ${_items[i]['naslov']}'),
+                              Text('Opis: ${_items[i]['opis']}'),
+                              Text('Št. vtičnic: ${_items[i]['vticnicaSt']}'),
+                              Text('Vrsta vtičnice: ${_items[i]['vrstaVticnice']}'),
+                              Text('Nazivna moč: ${_items[i]['nazivnaMoc']}'),
+                              Text('Cena: ${_items[i]['cena']}'),
+                              ElevatedButton(
+                                child: const Text('Skrij'),
+                                style: ElevatedButton.styleFrom(
+                                  primary: appbar,
+                                  textStyle: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.normal),
+                                ),
+                                onPressed: () => Navigator.pop(context),
+                              )
+                            ],
+                          ),
+                        ),
+
+                      );
+                    },
+                  );
+                  log('Selected: ${_items[i]['opis_lokacije']}');
                 },
                 child: Image.asset('assets/icons/chargers_green.png'),
               );
             },
           ),
-      );
+        );
       }
-    return _markerList;
-  }
+      return _markerList;
+    }
+    final _markers = _buildMarkers();
 
-    @override
-    Widget build(BuildContext context) {
-      _readJson();
-      final _markers = _buildMarkers();
-
-      return Scaffold(
-        drawer: NavBar(),
-        appBar: AppBar(
-          centerTitle: true,
-          title: Column(
-            children: [
-              Text('Mobilnost v Brežicah'),
-              Text(
-                'Električne polnilnice',
-                style: TextStyle(fontSize: 14.0),
-              ),
-            ],
-          ),
-          backgroundColor: appbar,
+    return Scaffold(
+      drawer: NavBar(),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Column(
+          children: [
+            Text('Mobilnost v Brežicah'),
+            Text(
+              'Električne polnilnice',
+              style: TextStyle(fontSize: 14.0),
+            ),
+          ],
         ),
-        body: Stack(
+        backgroundColor: appbar,
+      ),
+      body: Stack(
           children: [
             FlutterMap(
               options: MapOptions(
@@ -101,7 +137,7 @@ class _ChargesState extends State<Charges> {
               ],
             ),
           ]
-        ),
-      );
-    }
+      ),
+    );
+  }
   }

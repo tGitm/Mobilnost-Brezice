@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'dart:developer';
 import 'package:get/get.dart';
-import 'package:brezice_mobility/components/size_config.dart';
+//import 'package:brezice_mobility/components/size_config.dart';
 import 'package:brezice_mobility/components/nav_bar.dart';
 import 'dart:async';
 
@@ -25,8 +25,6 @@ class _HomeState extends State<Home> {
   Color appbar = Color(0xff4471a0);
   List<dynamic> _items = [];
 
-
-
     @override
     Widget build(BuildContext context) {
       //Fetch data from json
@@ -42,43 +40,10 @@ class _HomeState extends State<Home> {
         /*setState(() {
       _items = data["parkings"];
     });*/
-
       }
 
 
-      /// project bottom sheet
-      showBottomSheet(Text lokacija, Text opis_loacije, Text parkirni_prostori, Text prostori_za_invalide, Text parkirni_rezim) {
-        Get.bottomSheet(
-          Container(
-            padding: EdgeInsets.only(top: 4),
-            height: SizeConfig.screenHeight * 0.35,
-            width: SizeConfig.screenWidth,
-            color: Colors.white,
-            child: Column(children: [
-              Container(
-                height: 6,
-                width: 120,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey[300]
-                ),
-              ),
-              Spacer(),
-              //here I'll add close button
-              /*_buildBottomSheetButton(  // čene pa damo task completed gumb še zravn
-                  label: "Task Completed",
-                  onTap: () {
-                    _taskController.markTaskCompleted(task.id);
-                    Get.back();
-                  },
-                  clr: primaryClr),*/
-              SizedBox(
-                height: 20,
-              ),
-            ]),
-          ),
-        );
-      }
+
 
       List<Marker> _buildMarkers() {
         _readJson();
@@ -92,13 +57,46 @@ class _HomeState extends State<Home> {
               builder: (_) {
                 return GestureDetector(
                   onTap: () {
-                    showBottomSheet(
-                      Text('Lokacija: ${_items[i]['lokacija_parkirisca']}'),
-                      Text('Opis: ${_items[i]['opis_lokacije']}'),
-                      Text('Št. mest: ${_items[i]['parkirni_prostori']}'),
-                      Text('Mesta invalidi: ${_items[i]['parkirni_prostori_za_invalide']}'),
-                      Text('Režim: ${_items[i]['parkirni_rezim']}'),
-                    );
+                        showModalBottomSheet<void>(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return Container(
+                              height: 250,
+                              color:  Colors.grey[100],
+                              child: Padding(
+                                padding:  EdgeInsets.fromLTRB(10, 0, 10, 0),
+                                child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      Padding(
+                                          padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                                          child: Text(
+                                            'Podatki o parkirnem mestu',
+                                            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                          ),
+                                      ),
+                                      Text('Lokacija: ${_items[i]['lokacija_parkirisca']}'),
+                                      Text('Opis: ${_items[i]['opis_lokacije']}'),
+                                      Text('Št. mest: ${_items[i]['parkirni_prostori']}'),
+                                      Text('Mesta invalidi: ${_items[i]['parkirni_prostori_za_invalide']}'),
+                                      Text('Režim: ${_items[i]['parkirni_rezim']}'),
+                                      ElevatedButton(
+                                        child: const Text('Skrij'),
+                                        style: ElevatedButton.styleFrom(
+                                          primary: appbar,
+                                        textStyle: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.normal),
+                                        ),
+                                        onPressed: () => Navigator.pop(context),
+                                      )
+                                    ],
+                                  ),
+                              ),
+
+                            );
+                          },
+                        );
                     log('Selected: ${_items[i]['opis_lokacije']}');
                   },
                   child: Image.asset('assets/icons/parking_blue.png'),

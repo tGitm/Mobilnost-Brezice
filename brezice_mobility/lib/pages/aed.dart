@@ -22,69 +22,96 @@ class _AedState extends State<Aed> {
   Color appbar = Color(0xff4471a0);
   List<dynamic> _items = [];
 
-
-
-    @override
-    Widget build(BuildContext context) {
-      double zoom = 11.2;
-      //Fetch data from json
-      Future<void> _readJson() async {
-        final String response = await rootBundle.loadString(
-            'assets/data/lokacije_defibrilatorjev.json');
-        final data = await json.decode(response);
-        _items = data['aeds'];
-        print(_items[0]['opis']);
-        print(_items[0]['latitude']);
-        print(_items[0]['longitude']);
-        /*setState(() {
+  @override
+  Widget build(BuildContext context) {
+    //Fetch data from json
+    Future<void> _readJson() async {
+      final String response = await rootBundle.loadString(
+          'assets/data/lokacije_defibrilatorjev.json');
+      final data = await json.decode(response);
+      _items = data['aeds'];
+      /*setState(() {
       _items = data["parkings"];
     });*/
+    }
 
-      }
-
-      List<Marker> _buildMarkers() {
-        final _markerList = <Marker>[];
-        for (int i = 0; i < _items.length; i++) {
-          _markerList.add(
-            Marker(
-              width: 24.0,
-              height: 24.0,
-              point: LatLng(_items[i]['latitude'], _items[i]['longitude']),
-              builder: (_) {
-                return GestureDetector(
-                  onTap: () {
-                    zoom = 16;
-                    _center = LatLng(_items[i]['latitude'], _items[i]['longitude']);
-                    log('Selected: ${_items[i]['opis']}');
-                  },
-                  child: Image.asset('assets/icons/aed_green.png'),
-                );
-              },
-            ),
-          );
-        }
-        return _markerList;
-      }
-
+    List<Marker> _buildMarkers() {
       _readJson();
-      final _markers = _buildMarkers();
+      final _markerList = <Marker>[];
+      for (int i = 0; i < _items.length; i++) {
+        _markerList.add(
+          Marker(
+            width: 28.0,
+            height: 28.0,
+            point: LatLng(_items[i]['latitude'], _items[i]['longitude']),
+            builder: (_) {
+              return GestureDetector(
+                onTap: () {
+                  showModalBottomSheet<void>(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        height: 200,
+                        color:  Colors.grey[100],
+                        child: Padding(
+                          padding:  EdgeInsets.fromLTRB(10, 0, 10, 0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                                child: Text(
+                                  'Podatki o defibrilatorju',
+                                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              Text('Opis: ${_items[i]['opis']}'),
+                              Text('Dostopnost: ${_items[i]['delovni_cas']}'),
+                              ElevatedButton(
+                                child: const Text('Skrij'),
+                                style: ElevatedButton.styleFrom(
+                                  primary: appbar,
+                                  textStyle: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.normal),
+                                ),
+                                onPressed: () => Navigator.pop(context),
+                              )
+                            ],
+                          ),
+                        ),
 
-      return Scaffold(
-        drawer: NavBar(),
-        appBar: AppBar(
-          centerTitle: true,
-          title: Column(
-            children: [
-              Text('Mobilnost v Brežicah'),
-              Text(
-                'Defibrilatorji',
-                style: TextStyle(fontSize: 14.0),
-              ),
-            ],
+                      );
+                    },
+                  );
+                  log('Selected: ${_items[i]['opis']}');
+                },
+                child: Image.asset('assets/icons/aed_green.png'),
+              );
+            },
           ),
-          backgroundColor: appbar,
+        );
+      }
+      return _markerList;
+    }
+    final _markers = _buildMarkers();
+
+    return Scaffold(
+      drawer: NavBar(),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Column(
+          children: [
+            Text('Mobilnost v Brežicah'),
+            Text(
+              'Defibrilatorji',
+              style: TextStyle(fontSize: 14.0),
+            ),
+          ],
         ),
-        body: Stack(
+        backgroundColor: appbar,
+      ),
+      body: Stack(
           children: [
             FlutterMap(
               options: MapOptions(
@@ -106,7 +133,7 @@ class _AedState extends State<Aed> {
               ],
             ),
           ]
-        ),
-      );
-    }
+      ),
+    );
+  }
   }

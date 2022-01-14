@@ -10,19 +10,24 @@ class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Padding (
+      child: ListView(
         padding: EdgeInsets.zero,
-         child: Column(
-        children: [
-          UserAccountsDrawerHeader(
-            accountEmail: Text('Developed by: Tim Rus'),
-            currentAccountPicture: Image.asset('assets/images/logotip_brezice.png'),
-            decoration: BoxDecoration(
-              color: Colors.grey,
-             ),
-          ),
+            children: [
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                ),
+                child: Container(
+                  child: Image.asset(
+                    'assets/images/logotip.png',
+                    height: 100,
+                    width: 200,
+                  ),
+
+                ),
+            ),
           ListTile(
-            leading: Icon(Icons.favorite),
+            leading: Icon(Icons.directions_car),
             title: Text('Parkirna mesta'),
             onTap: () {
               Navigator.push(
@@ -33,8 +38,20 @@ class NavBar extends StatelessWidget {
               );
             },
           ),
+              ListTile(
+                leading: Icon(Icons.battery_charging_full),
+                title: Text('Električne polnilnice'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Charges(),
+                    ),
+                  );
+                },
+              ),
           ListTile(
-            leading: Icon(Icons.person),
+            leading: Icon(Icons.directions_bike ),
             title: Text('Izposojevalnice koles'),
             onTap: () {
               Navigator.push(
@@ -46,19 +63,7 @@ class NavBar extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.share),
-            title: Text('Električne polnilnice'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Charges(),
-                ),
-              );
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.notifications),
+            leading: Icon(Icons.bolt),
             title: Text('Defibrilatorji'),
             onTap: () {
               Navigator.push(
@@ -70,7 +75,7 @@ class NavBar extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.settings),
+            leading: Icon(Icons.speed ),
             title: Text('Prikazovalniki hitrosti'),
             onTap: () {
               Navigator.push(
@@ -82,7 +87,7 @@ class NavBar extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.settings),
+            leading: Icon(Icons.library_books ),
             title: Text('O projektu'),
             onTap: () {
               Navigator.push(
@@ -94,8 +99,7 @@ class NavBar extends StatelessWidget {
             },
           ),
         ],
-      ),
-      ),
+    ),
     );
   }
 }
