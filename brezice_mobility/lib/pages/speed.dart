@@ -1,3 +1,4 @@
+import 'package:brezice_mobility/components/nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
@@ -26,9 +27,9 @@ class _SpeedState extends State<Speed> {
     final String response = await rootBundle.loadString(
         'assets/data/merilniki_hitrosti.json');
     final data = await json.decode(response);
-    _items = data['parkings'];
+    _items = data['speeds'];
     print(_items[0]['opis']);
-    print(_items[0]['proizvajalec']);
+    print(_items[0]['delovni_cas']);
     print(_items[0]['latitude']);
     print(_items[0]['longitude']);
     /*setState(() {
@@ -65,6 +66,7 @@ class _SpeedState extends State<Speed> {
       final _markers = _buildMarkers();
 
       return Scaffold(
+        drawer: NavBar(),
         appBar: AppBar(
           centerTitle: true,
           title: Column(
@@ -83,8 +85,8 @@ class _SpeedState extends State<Speed> {
             FlutterMap(
               options: MapOptions(
                 center: _brezice,
-                zoom: 22.0,
-                minZoom: 13,
+                zoom: 11.3,
+                minZoom: 10,
               ),
               layers: [
                 TileLayerOptions(

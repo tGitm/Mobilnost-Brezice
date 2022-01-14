@@ -7,6 +7,7 @@ import 'dart:developer';
 import 'package:get/get.dart';
 import 'package:brezice_mobility/components/size_config.dart';
 import 'package:brezice_mobility/components/nav_bar.dart';
+import 'dart:async';
 
 
 class Home extends StatefulWidget {

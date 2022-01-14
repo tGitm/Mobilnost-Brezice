@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+
+/// file ki ima Size Configuration čez
 class SizeConfig {
   static MediaQueryData _mediaQueryData;
   static double screenWidth;
@@ -7,8 +9,7 @@ class SizeConfig {
   static double defaultSize;
   static Orientation orientation;
 
-  @override
-  void initState(BuildContext context) {
+  void init(BuildContext context) {
     _mediaQueryData = MediaQuery.of(context);
     screenWidth = _mediaQueryData.size.width;
     screenHeight = _mediaQueryData.size.height;

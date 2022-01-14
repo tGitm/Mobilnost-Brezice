@@ -81,6 +81,18 @@ class NavBar extends StatelessWidget {
               );
             },
           ),
+          ListTile(
+            leading: Icon(Icons.settings),
+            title: Text('O projektu'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => About(),
+                ),
+              );
+            },
+          ),
         ],
       ),
       ),

@@ -1,3 +1,4 @@
+import 'package:brezice_mobility/components/nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
@@ -70,6 +71,7 @@ class _BikesState extends State<Bikes> {
       final _markers = _buildMarkers();
 
       return Scaffold(
+        drawer: NavBar(),
         appBar: AppBar(
           centerTitle: true,
           title: Column(
@@ -88,7 +90,7 @@ class _BikesState extends State<Bikes> {
             FlutterMap(
               options: MapOptions(
                 center: _brezice,
-                zoom: 22.0,
+                zoom: 15.5,
                 minZoom: 13,
               ),
               layers: [

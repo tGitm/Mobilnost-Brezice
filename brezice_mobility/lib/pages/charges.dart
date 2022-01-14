@@ -1,3 +1,4 @@
+import 'package:brezice_mobility/components/nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
@@ -49,7 +50,7 @@ class _ChargesState extends State<Charges> {
                 onTap: () {
                   log('Selected: ${_items[i]['opis']}');
                 },
-                child: Image.asset('assets/icons/charges_green.png'),
+                child: Image.asset('assets/icons/chargers_green.png'),
               );
             },
           ),
@@ -64,6 +65,7 @@ class _ChargesState extends State<Charges> {
       final _markers = _buildMarkers();
 
       return Scaffold(
+        drawer: NavBar(),
         appBar: AppBar(
           centerTitle: true,
           title: Column(
@@ -82,8 +84,8 @@ class _ChargesState extends State<Charges> {
             FlutterMap(
               options: MapOptions(
                 center: _brezice,
-                zoom: 15.0,
-                minZoom: 13,
+                zoom: 11.2,
+                minZoom: 10,
               ),
               layers: [
                 TileLayerOptions(
