@@ -21,6 +21,7 @@ class _BikesState extends State<Bikes> {
   Color appbar = Color(0xff4471a0);
   List<dynamic> _items = [];
 
+
   //Fetch data from json
   Future<void> _readJson() async {
     final String response = await rootBundle.loadString(  //here I load Json file as string
@@ -37,8 +38,11 @@ class _BikesState extends State<Bikes> {
 
   }
 
+
+
   //function for building markers for mapbox
   List<Marker> _buildMarkers() {
+    _readJson();
     final _markerList = <Marker>[];
     for (int i = 0; i < _items.length; i++) {
       _markerList.add(
@@ -62,7 +66,7 @@ class _BikesState extends State<Bikes> {
 
     @override
     Widget build(BuildContext context) {
-      _readJson();
+
       final _markers = _buildMarkers();
 
       return Scaffold(
